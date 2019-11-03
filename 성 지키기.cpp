@@ -1,0 +1,3 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;char map[51][51];int n, m, cnt = 0;int main() {cin >> n >> m;for (int i = 0; i < n; i++) cin >> map[i];int a = 0, b = 0;for (int i = 0; i < n; i++) {int cnt = 0;for (int j = 0; j < m; j++) {if (map[i][j] == '.') cnt++;}if (cnt == m) a++;}for (int j = 0; j < m; j++) {	int cnt = 0;for (int i = 0; i < n; i++) {	if (map[i][j] == '.') cnt++;	}if (cnt == n) b++;}cout << max(a,b)<< "\n";}

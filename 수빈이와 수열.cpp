@@ -1,0 +1,2 @@
+#include <iostream>
+using namespace std;int a[100];int b[100];int main() {int n, temp = 0;;cin >> n;for (int i = 0; i < n; i++) cin >> b[i];for (int i = 0; i < n; i++) {a[i] = (i + 1) * b[i] - temp;	temp += a[i];}for (int i = 0; i < n; i++) cout << a[i] << " ";cout << endl;}

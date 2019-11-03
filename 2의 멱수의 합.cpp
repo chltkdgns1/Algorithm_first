@@ -1,0 +1,2 @@
+#include <iostream>
+using namespace std;long long dp[1000001];int main() {int n;cin >> n;dp[0] = 1;for (long long i = 1; i <= n; i <<= 1) {for (long long j = i; j <= n; j++) {	dp[j] = (dp[j] + dp[j - i]) % 1000000000;}}cout << dp[n] << "\n";}
